@@ -1,0 +1,99 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación: The Amazing Digital Circus</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body font-family: sans-serif; display: flex; justify-content: center; padding: 40px;">
+    
+    <h1 style="color: #0400ff; text-transform: uppercase; margin-bottom: 5%;">Te invito a ver la película:</h1>
+    <h2 style=" color:#ff2600; text-transform: uppercase; margin-bottom: 5%;">The Amazing Digital Circus</h2>
+    <p style="font-size: 22px; color: #ffee00; font-weight: bold;">Fecha: 6 de Junio 2026 </p>
+
+    <div style="width: 100%; border-radius: 10px; overflow: hidden;">
+        <img src="./images/Jax.jpg" 
+                alt="Digital Circus" 
+                style="width: 70%; display: block;">
+    </div>
+
+    
+    <h3>Necesitamos:</h3>
+    <ul>
+        <li>90 pesos por persona para participar en la actividad</li>
+        <li>Tu merch de la serie</li>
+        <li>Muchas teorías para debatir</li>
+    </ul>
+    
+    <span style="font-weight: bold; display: block;">AQUÍ SERÁ LA FUNCIÓN:</span>
+    <a href="https://maps.app.goo.gl/nCXpeH8xSYAfNgzS7" target="_blank" style="color: #00a6ff; text-decoration: underline; font-size: 18px;">
+        Abrir ubicación en el mapa
+    </a>
+    <br>
+    <a href="https://maps.app.goo.gl/nCXpeH8xSYAfNgzS7" target="_blank" style="color: #00a6ff; text-decoration: underline; font-size: 18px;">
+        Ver en mapa
+    </a>
+
+
+    
+
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación: The Amazing Digital Circus</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding: 40px; background-color: #1a1a1a; color: white;">
+    
+    <h1 style="color: #ffee00;">¡HOLA, <span id="nombreDestino">INVITADO</span>!</h1>
+
+    <h1 style="color: #0400ff; text-transform: uppercase; margin-bottom: 5%;">Te invito a ver la película:</h1>
+    <h2 style=" color:#ff2600; text-transform: uppercase; margin-bottom: 5%;">The Amazing Digital Circus</h2>
+    <p style="font-size: 22px; color: #ffee00; font-weight: bold;">Fecha: 6 de Junio 2026 </p>
+
+    <div style="width: 100%; border-radius: 10px; overflow: hidden; display: flex; justify-content: center;">
+        <img src="./images/Jax.jpg" 
+                alt="Digital Circus" 
+                style="width: 300px; display: block; border: 5px solid #ff2600;">
+    </div>
+
+    <h3>Necesitamos:</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li>🎟️ 100 pesos por persona</li>
+        <li>👕 Tu merch de la serie</li>
+        <li>🤔 Muchas teorías para debatir</li>
+    </ul>
+    
+    <span style="font-weight: bold; display: block; margin-top: 20px;">AQUÍ SERÁ LA FUNCIÓN:</span>
+    <a href="http://maps.google.com" target="_blank" style="color: #00a6ff; text-decoration: underline; font-size: 18px;">
+        Abrir ubicación en el mapa
+    </a>
+
+    <script>
+    // LEEMOS el nombre guardado
+    const nombreGuardado = localStorage.getItem("nombreInvitado");
+
+    // Obtenemos el elemento del HTML
+    const etiquetaNombre = document.getElementById("nombreDestino");
+
+    // Mostrar
+    if (nombreGuardado) {
+        etiquetaNombre.innerText = nombreGuardado.toUpperCase();
+    } else {
+        etiquetaNombre.innerText = "INVITADO";
+    }
+
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+</script>
+</body>
+</html>
